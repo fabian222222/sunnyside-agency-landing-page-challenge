@@ -57,6 +57,7 @@ header {
     font-size: 60px;
     font-family: 'fraunces';
     font-weight: 700;
+    text-align: center;
 }
 .header_background > img {
     width: 100%;
@@ -88,10 +89,6 @@ header {
 .brand_section_container_element_texts_title {
     width: 70%;
     margin-bottom: 20px;
-}
-.brand_section_container_element_texts {
-    max-height: 250px;
-    overflow-y: auto; 
 }
 .brand_section_container_element_texts_title_text {
     font-size: 40px;
@@ -142,6 +139,7 @@ header {
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    height: 100%;
 }
 .brand_section_container_element_container > img { 
     grid-area: 1 / 1 / 6 / 6; 
@@ -187,6 +185,7 @@ header {
     font-size: 20px;
     color: hsl(232, 10%, 55%);
     font-family: "fraunces";
+    text-align: center;
 }
 .testimonial_container_elements_persona {
     display: flex;
@@ -234,6 +233,7 @@ header {
 
 .footer_decoration_container {
     display: flex;
+    flex-wrap: wrap;
 }
 .footer_decoration_container_element {
     width: 25%;
@@ -271,3 +271,126 @@ footer {
 .footer_container_element_menu_element, .footer_container_element_media {
     margin-inline: 10px;
 }
+.testimonial_container_elements_persona_container_elements_name_text {
+    font-weight: 900;
+    font-size: 20px;
+}
+.fas.fa-bars{
+    display: none;
+    cursor: pointer;
+}
+
+.responsive_menu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 120px;
+    background-color: #fff;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 40px 0;
+}
+.responsive_menu_container_list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+.responsive_menu_container_list > :not(.responsive_menu_container_list_element:last-of-type) {
+    margin-bottom: 25px;
+}
+.responsive_menu_container_list_element:last-of-type{
+    background-color: #FFD100;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+}
+.responsive_menu_top_right_coin{
+    position: absolute;
+    top: -25px;
+    right: 0;
+    z-index: 11;
+    border-bottom : 25px solid white;
+    border-left : 25px solid transparent;
+}
+
+@media only screen and (max-width: 1000px){
+    .brand_section_container_element_texts_title_text {
+        font-size: 25px;
+    }
+    .brand_section_container_element_texts_explain_text, .brand_section_container_element_text_link_text {
+        font-size: 15px;
+    }
+}   
+
+@media only screen and (max-width: 750px){
+    .brand_section_container_element_texts_title_text {
+        font-size: 17px;
+    }
+    .brand_section_container_element_texts_explain_text, .brand_section_container_element_text_link_text {
+        font-size: 13px;
+    }
+}   
+@media only screen and (max-width: 650px){
+    .brand_section_container {
+        flex-direction: column;
+    }
+    .brand_section_container_element {
+        width: 100%;
+    }
+    .brand_section_container_element_texts {
+        padding: 80px 0;
+        text-align: center;
+    }
+    .brand_section_container_element_text_link {
+        display: flex;
+        justify-content: center;
+    }
+    .brand_section_container_element_texts_title, .brand_section_container_element_texts_explain {
+        width: 100%;
+    }
+    .brand_section_container_element_texts_title_text {
+        font-size: 25px;
+    }
+    .brand_section_container_element_texts_explain_text, .brand_section_container_element_text_link_text {
+        font-size: 18px;
+    }
+    .brand_section_container_element:nth-child(1) {
+        order: 1;
+    }
+    .brand_section_container_element:nth-child(2) {
+        order: 2;
+    }
+    .brand_section_container_element:nth-child(3) {
+        order: 4;
+    }
+    .brand_section_container_element:nth-child(4) {
+        order: 3;
+    }
+    .brand_section_container_element:nth-child(5) {
+        order: 5;
+    }
+    .brand_section_container_element:nth-child(6) {
+        order: 6;
+    }
+    .testimonial_container_elements_persona {
+        flex-direction: column;
+    }
+    .testimonial_container_elements_persona > :not(.testimonial_container_elements_persona_container:last-of-type) {
+        margin-bottom: 100px;
+    }
+    .footer_decoration_container_element {
+        min-width: 50%;
+    }
+    .header_container_list_elements {
+        display: none;
+    }
+    .fas.fa-bars {
+        display: flex;
+        font-size: 30px;
+    }
+    .header_title_text {
+        font-size: 40px;
+    }
+}   
